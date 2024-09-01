@@ -1,4 +1,4 @@
-A motion typography poster on website
+A motion typography poster on website for Typography Design 2 class.
 <br><br>
 <p>
   <img src="intro1.png" alt="Preview 1" width="300">
