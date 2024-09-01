@@ -1,14 +1,13 @@
 A motion typography poster on website
 <br><br>
-Site live at https://snu-typo-final-11.glitch.me/ (by Glitch)
-<br><br>
-
 <p>
   <img src="intro1.png" alt="Preview 1" width="300">
   <img src="intro2.png" alt="Preview 2" width="300">
 </p>
-<img src="still1.png" alt="Preview 3" width="500">
-<img src="still2.png" alt="Preview 4" width="500">
+<img src="still1.png" alt="Preview 3" width="650">
+<img src="still2.png" alt="Preview 4" width="650">
+<br><br>
+Site live at https://snu-typo-final-11.glitch.me/ (by Glitch)
 <br><br>
 
 ## Acknowledgements
