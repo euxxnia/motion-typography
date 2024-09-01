@@ -1,0 +1,199 @@
+/* Explanation in JS tab */
+
+/* Cool font from Google Fonts! */
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Moirai+One&family=Orbit&display=swap');
+
+body {
+  cursor: url('https://cdn.glitch.global/84436500-7f27-4a74-bf05-f924b835d970/image%207.png?v=1702878758331')0 0, pointer;
+  overflow: hidden;
+	margin: 0px;
+  width: 100%;
+  height: 100%;
+/*   background-color: yellow; */
+  background-image: url('https://cdn.glitch.global/84436500-7f27-4a74-bf05-f924b835d970/%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8_%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%82%E1%85%B3%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%2030.png?v=1702811420307');
+  background-size: cover;
+/*   background-position: center;  */
+/*   background-color: #DBAC7E; */
+}
+
+.main-elements {
+  filter: blur(0.4vw); /* 초기에 blur 효과 부여 */
+/*   filter: saturate(0); */
+  transition: filter 1s ease; /* blur 효과에 대한 애니메이션 속성 */
+/*   z-index: 1; /* container 위에 위치 */ 
+/*   opacity: 0; 초기에 숨겨진 상태 */
+}
+
+
+.wall{
+  z-index: 2;
+  position: absolute;
+/*   background-color: white; */
+  top: 0%;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.green{
+/*   background:white; */
+/*   z-index: 5; */
+  position: absolute;
+    height: 80vh;
+  margin-left:30vw;
+  margin-top: 43vh;
+}
+
+.graffiti{
+/*   cursor: pointer; */
+  cursor: url('https://cdn.glitch.global/84436500-7f27-4a74-bf05-f924b835d970/Group%203.png?v=1702755186930') 0 0, pointer;
+  z-index: 5;
+    position: absolute;
+  width: 35vh;
+  left: 40vh;
+  top: 50vh;
+}
+
+#wall{
+/*   position: absolute; */
+  height: 80vh;
+  margin-top: 20vh;
+}
+
+#ball{
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.balloon{
+/*   position:absolute;	 */
+  width: 100%;
+/*   height: 30%; */
+  overflow: hidden;
+  background: #EDEDED;
+  margin: 0;
+  padding: 0;
+  font-family: Bagel Fat One, sans-serif;
+/*   background-color: white; */
+}
+
+canvas
+{
+/*   background-color: white; */
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  position:absolute;	
+/* 	left: 30%; */
+	top: 0%;
+	margin: 0px auto;
+}
+
+
+#container {
+	/* Center the text in the viewport. */
+	position: absolute;
+/*   background-color: white; */
+/*     z-index: 3; */
+	margin: auto;
+	width: 100vw;
+/* 	height: 80pt; */
+	top: 40vh;
+	bottom: 0;
+	
+	/* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+	filter: url(#threshold) blur(0.6px);
+}
+
+/* Your average text styling */
+#text1, #text2 {
+	color: white;
+	position: absolute;
+	width: 100%;
+	display: inline-block;
+	
+	font-family: Bagel Fat One, sans-serif;
+	font-size: 9vw;
+	
+	text-align: center;
+	
+	user-select: none;
+}
+
+.layer{
+z-index:3;
+}
+
+
+
+.paper{
+/*   background-color:white; */
+  position: absolute;
+  margin-top: 50vh;
+/*   width: 50vw;
+  height: 70vh; */
+  margin-left: 50vw;
+/*   transform: translate(0%, -50vh); */
+}
+
+h1 {
+	font-family: 'Orbit', monospace;
+	font-size: 5vh;
+	text-transform: uppercase;
+/* 	width: 1109px;
+	height: 365px; */
+	color: #FF9800;
+}
+
+.char {
+	offset-path: path('M.2 219.6c247-107 233.3 91.4 406.4 138.4C659.2 426.6 750.2 6.6 552.2.6 337.7-5.9 426.9 415 696.1 359.4c256.1-52.9 182.1-217.9 413.1-163.9');
+	offset-distance: calc(var(--char-index) * 5vh);
+	position: absolute;
+	animation: loop 3500ms cubic-bezier(.62,.01,.42,1.01) infinite alternate calc(var(--char-index) * 10ms);
+}
+
+@keyframes loop {
+	50% {
+		offset-distance: calc((var(--char-index) * 7vh) + 700px);
+		color: #4CAF50;
+	}
+	100% {
+		offset-distance: calc((var(--char-index) *5vh) + 1690px);
+	}
+}
+
+@keyframes rotate{
+  0% {
+  transform: perspective(1000px) rotateY(4deg);
+  }
+  50%{
+  transform: perspective(1000px);
+  }
+  100% {
+  transform: perspective(1000px) rotateY(4deg);
+  }
+}
+
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0) rotateX(30deg); /* 시작과 끝 지점에서 이미지는 정지 */
+  }
+  50% {
+    transform: translateY(-20px) rotateX(-30deg); /* 중간에 이미지를 위로 약간 이동 */
+  }
+}
+
+#cloud{
+    animation: floatAnimation 6s ease-in-out infinite;
+/*     animation: rotate 4s infinite ease-in-out; */
+}
+
+#cloud:hover{
+  animation: none;
+  filter: none;
+transform: scale(1.2);
+}
