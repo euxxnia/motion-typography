@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<!--     <meta name="viewport" content="width=1920, height=1080, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>오늘은 우리의 날</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+  </head>
+  
+  
+  
+  
+  <body>
+
+<!--     <p>
+      2022-17200 최유진
+    </p> -->
+    <div class="main-elements">
+
+    <div class="wall">
+    <img id= "wall" src="https://cdn.glitch.global/84436500-7f27-4a74-bf05-f924b835d970/%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8_%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%82%E1%85%B3%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%2024.png?v=1702737296290" alt="벽 이미지">
+<!--     <p class="text-animation">벽 레이어의 텍스트</p> -->
+  </div>
+<!--       <div class="wall2">
+            <img id="wall2" src="https://cdn.glitch.global/84436500-7f27-4a74-bf05-f924b835d970/%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8_%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%82%E1%85%B3%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%2031.png?v=1702812639613">
+      </div> -->
+      <div class="graffiti">
+                    <img id="graffiti" src="https://cdn.glitch.global/84436500-7f27-4a74-bf05-f924b835d970/%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8_%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%82%E1%85%B3%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3-1.png?v=1702754854138">
+
+      </div>
+          <div class="drawing-layer"></div>
+
+
+    
+    <div class="balloon">
+    <canvas id="canvas"></canvas>
+
+  </div>
+      
+      <div>
+            <img id="cloud1" src="https://cdn.glitch.global/84436500-7f27-4a74-bf05-f924b835d970/%E3%85%8A-01.png?v=1702815028569">
+
+      </div>
+    
+  <div class="green">
+<!--     <img src="paper_image.jpg"> -->
+    <h1 data-splitting>아이들을 배웠으면 좋겠어요 어른들이!</h1>
+<!--     <p class="text-animation">종이 레이어의 텍스트</p> -->
+  </div>
+          
+    </div>
+
+    <div class="layer">
+      
+    <div id="container">
+      <span id="text1"></span>
+      <span id="text2"></span>
+    </div>
+
+    <!-- The SVG filter used to create the merging effect -->
+    <svg id="filters">
+      <defs>
+        <filter id="threshold">
+          <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+          <feColorMatrix in="SourceGraphic"
+              type="matrix"
+              values="1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 255 -140" />
+        </filter>
+      </defs>
+    </svg>
+          </div>
+
+  </body>
+</html>
